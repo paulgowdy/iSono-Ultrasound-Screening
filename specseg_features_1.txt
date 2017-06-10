@@ -1,0 +1,45 @@
+
+	segment stats: a list of dictionaries
+	one dictionary for each segment containing the following features (in this order)
+
+	.segment #
+	.centroid x-coord
+	.centroid y-coord
+	.total area (pixels)
+	.max x dim of bounding box
+	.max y dim of bounding box
+	.(max x dim)/total area
+	.(max y dim)/total area
+	.(max x dim)/(max y dim)
+	.total pixel intensity
+	.mean pixel intensity
+	.min pixel intensity
+	.max pixel intensity
+	.pixel intensity range
+
+	.standard deviation of pixels
+	.mean absolute deviation of pixels
+	.scipy.stats.skew
+	.scipy.stats.kurtosis
+
+	.# of edges
+
+	.MASK PIXELS contained in the segment
+	.(mask pixels)/(total pixels)
+
+	.[one for each other segment]
+	.for each other segment, 1 if you border it, 0 if you dont
+	.the difference in mean pixel intensity between current segment and each other segment
+	.product of the two above
+
+	.mean difference with bordering segments
+
+	---
+
+	Not implemented yet
+
+	histogram of gradients from within region
+	gradients along edge (identify edge pixels)
+	longest actual x and y dim, not bounding box
+	how central the region is in the image as a %, so like centroid x,y div the image length/width...
+
