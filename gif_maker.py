@@ -11,11 +11,11 @@ def sorted_nicely( l ):
 
 images = []
 
-filenames = glob('Data/Unlabeled/lesion_c8_seg_vid/*.png')
+filenames = glob('bb_videos/c20_bb/*.png')
 filenames = sorted_nicely(filenames)
 
 for filename in filenames:
     images.append(imageio.imread(filename))
 
 kargs = {'duration': 0.14}
-imageio.mimsave('lesion_c8_xgb_regress_high_res_1.gif', images, **kargs)
+imageio.mimsave('bb_videos/c20_bb.gif', images, **kargs)
