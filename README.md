@@ -24,6 +24,7 @@ This produces a family of segmented images (see multi_segment in is_utils.py).
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/segment_example.png" width="400">
 </h3>
+make this a family!
 
 From this point forward, segment_number-beta value combinations are held apart: the steps below are repeated seperately for each of the 36 possible n-beta pairs.
 
