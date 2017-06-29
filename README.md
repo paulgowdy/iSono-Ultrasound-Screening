@@ -13,6 +13,9 @@ Develped in collaboration with iSono Health, this image classification system de
 
 ## Model Description
 
+### Using Current (Pretrained) Model
+
+### Train Your Own
 
 
 ## Setup
