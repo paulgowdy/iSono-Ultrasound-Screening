@@ -50,14 +50,12 @@ train_heatmap_classifiers.py trains an XGBoost Classifer for each .csv file crea
 
 Once a full set of classifiers has been trained, they can be applied to the output of the segment regressors for a given test image. To determine the final classification for an image we simply take an up-down majority vote and assign the image to the winning class.
 
-### Localization
+#### Localization
 
+Finally, if an image is classified as containing a lesion, I attempt to localize it by applying a bounding box. At present this is done by simply thresholding the averaged heatmap and identifying the largest contour remaining. This approach will fail when there are multiple lesions in a single image or when heat from a lesion is below the threshold (usually because it is more distributed). 
 
-
-### Using Current (Pretrained) Model
-
-### Train Your Own
-
+Currently this step is more a visualization perk, however it could be developed to add a further level of machine-assistance to the user, for example by indicating in which direction to move the ultrasound probe in order to better characterize the l
+esion. 
 
 ## Setup
 
@@ -66,5 +64,18 @@ I used Anaconda 4.3, python 2.7, and OpenCV 2.4.11. OpenCV is mainly used for vi
 These scripts expect a file structure as found in this repo. The models and features folders currently contain a subset of the models and features that I used - a full set can be shared upon request (paulgamble09@gmail.com). 
 
 To train your own models, you'll need ultrasound images hand-sorted into normal and lesion categories (I used ~12,000). You'll also need hand-drawn masks for some number of lesion images (I used ~500). In order to protect patient privacy, iSono has asked that I not share the original dataset. All images are used with permission.
+
+### Using Current (Pretrained) Model
+
+Edit apply_full_pipeline.py to point to your data. This will look for a full complement of models in the corresponding folders (segments and heatmaps). This will output the final classification. 
+
+apply_localizer.py works exactly the same way except that it also returns an image of the averaged heatmap and the input image, with a bounding box added if the image was classified as likely to contain a lesion. 
+
+### Train Your Own
+
+Place your images and masks into the corresponding folders. Then run segment_featurizer.py and heatmap_featurizer.py. [Note: heatmap_featurizer.py took roughly an hour to run on my laptop]. Once all of the feature .csv are in place, you can train the corresponding XGBoost Regressors and Classifiers with train_segment_regressors.py and train_heatmap_classifiers.py
+
+With these models in place, apply_full_pipeline.py and apply_localizer.py should work as above. 
+
 
 
