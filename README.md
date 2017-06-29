@@ -23,6 +23,7 @@ This produces a family of segmented images (see multi_segment in is_utils.py).
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/static/beta_n_seg_family_2.png" width="800">
 </h3>
+This segmentation approach is reasonably stable across different frames from the same patient and it appears able to automatically differentiate various soft tissue planes:
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-Data-Science/blob/master/static/lesion_c4_18seg.gif" width="800">
 </h1>
