@@ -7,6 +7,10 @@ Develped in collaboration with iSono Health, this image classification system de
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/c16_bb.gif" width="800">
 </h1>
 
+<h1 align="center">
+<img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/c31_bb.gif" width="800">
+</h1>
+
 ## Setup
 
 I used Anaconda 4.3, python 2.7, and OpenCV 2.4.11. OpenCV is mainly used for visualization and can be removed entirely from the model if necessary. 
@@ -15,4 +19,4 @@ These scripts expect a file structure as found in this repo. The models and feat
 
 To train your own models, you'll need ultrasound images hand-sorted into normal and lesion categories (I used ~12,000). You'll also need hand-drawn masks for some number of lesion images (I used ~500). In order to protect patient privacy, iSono has asked that I not share the original dataset. All images are used with permission.
 
-<center>![alt text](https://github.com/paulgowdy/Insight-BoS17/blob/master/c31_bb.gif)</center>
+
