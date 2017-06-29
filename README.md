@@ -6,7 +6,6 @@ Develped in collaboration with iSono Health, this image classification system de
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-Data-Science/blob/master/static/c16_bb.gif" width="800">
 </h1>
-
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-Data-Science/blob/master/static/c31_bb.gif" width="800">
 </h1>
@@ -24,6 +23,9 @@ This produces a family of segmented images (see multi_segment in is_utils.py).
 <h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/static/beta_n_seg_family_2.png" width="600">
 </h3>
+<h3 align="center">
+<img src="https://github.com/paulgowdy/Insight-Data-Science/blob/master/static/lesion_c4_18seg.gif" width="800">
+</h1>
 
 From this point forward, segment_number-beta value combinations are held apart: the steps below are repeated seperately for each of the 36 possible n-beta pairs.
 
