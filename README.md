@@ -21,7 +21,7 @@ betas = [5, 6, 7, 8, 9, 10]
 This produces a family of segmented images (see multi_segment in is_utils.py). An individual segmented image looks like this:
 
 <p1 align="center">
-<img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/segment_example.gif" width="800">
+<img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/segment_example.png" width="800">
 </p1>
 
 
