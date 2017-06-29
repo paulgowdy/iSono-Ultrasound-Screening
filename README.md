@@ -11,6 +11,10 @@ Develped in collaboration with iSono Health, this image classification system de
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/c31_bb.gif" width="800">
 </h1>
 
+## Model Description
+
+
+
 ## Setup
 
 I used Anaconda 4.3, python 2.7, and OpenCV 2.4.11. OpenCV is mainly used for visualization and can be removed entirely from the model if necessary. 
