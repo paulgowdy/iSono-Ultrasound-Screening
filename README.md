@@ -3,7 +3,7 @@ Insight Data Science consulting project, Summer 2017
 
 Develped in collaboration with iSono Health, this image classification system detects suspicious breast lesions in ultrasound images. This repository contains a fully trained pipeline as well as files to train a new model on your own data. 
 
-![alt text](https://github.com/paulgowdy/Insight-BoS17/blob/master/c16_bb.gif)
+<center>![alt text](https://github.com/paulgowdy/Insight-BoS17/blob/master/c16_bb.gif)</center>
 
 ## Setup
 
@@ -13,4 +13,4 @@ These scripts expect a file structure as found in this repo. The models and feat
 
 To train your own models, you'll need ultrasound images hand-sorted into normal and lesion categories (I used ~12,000). You'll also need hand-drawn masks for some number of lesion images (I used ~500). In order to protect patient privacy, iSono has asked that I not share the original dataset. All images are used with permission.
 
-![alt text](https://github.com/paulgowdy/Insight-BoS17/blob/master/c31_bb.gif)
+<center>![alt text](https://github.com/paulgowdy/Insight-BoS17/blob/master/c31_bb.gif)</center>
