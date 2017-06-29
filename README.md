@@ -13,6 +13,18 @@ Develped in collaboration with iSono Health, this image classification system de
 
 ## Model Description
 
+First, an input image is segmented using spectral_clustering (sklearn.cluster). A user-determined family of clustering parameters is used for each image. Currently I vary the number of segments and beta (roughly the bending energy of the segment boundaries). I used the following sets of values:
+
+n_segments = [35, 40, 45, 50, 55, 60]
+betas = [5, 6, 7, 8, 9, 10]
+
+This produces a family of segmented images (see multi_segment in is_utils.py). An individual segmented image looks like this:
+
+From this point forward, n_segment-beta value combinations are held apart: each step below is repeated seperately for each of the 36 possible n-beta pairs.
+
+
+
+
 ### Using Current (Pretrained) Model
 
 ### Train Your Own
