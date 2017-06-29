@@ -34,7 +34,7 @@ Segments are individually featurized. A full list of segment features can be see
 
 picture of mask overlay (faded)
 
-segment_featurizer.py points to a folder of images (each with a corresponding mask in a nested folder), and generates a .csv file containing the full feature set and percent-segment-masked for each segment_number-beta value pair. The .csv files are saved in the features/segment_features folder.
+segment_featurizer.py reads from a folder of images (each with a corresponding mask in a nested folder), and generates a .csv file containing the full feature set and percent-segment-masked for each segment_number-beta value pair. The .csv files are saved in the features/segment_features folder.
 
 train_segment_regressors.py trains an XGBoost Regressor for each .csv file (corresponding to each n-beta value pair) and pickles the models into the models/segment_regressors folder.
 
@@ -44,9 +44,15 @@ picture of heatmaps for different value pairs
 
 #### Classify Heatmaps
 
-heatmap_featurizer.py
+heatmap_featurizer.py has the same structure as segment_featurizer.py, except that it converts a heatmap into a set of features (a different set from the segment features! see feature_schema.txt). For training images, the label is simply the given category - much simpler than the segment regression.  It saves the heatmap features for a given segmentation parameter value set (segment_number-beta pair) as a .csv in the features/heatmap_features folder.
 
-train_heatmap_classifiers.py
+train_heatmap_classifiers.py trains an XGBoost Classifer for each .csv file created by heatmap_featurizer.py. These classifiers are pickled in the models/heatmap_classifiers folder.
+
+Once a full set of classifiers has been trained, they can be applied to the output of the segment regressors for a given test image. To determine the final classification for an image we simply take an up-down majority vote and assign the image to the winning class.
+
+### Localization
+
+
 
 ### Using Current (Pretrained) Model
 
