@@ -20,9 +20,9 @@ betas = [5, 6, 7, 8, 9, 10]
 
 This produces a family of segmented images (see multi_segment in is_utils.py). An individual segmented image looks like this:
 
-<p1 align="center">
+<h3 align="center">
 <img src="https://github.com/paulgowdy/Insight-BoS17/blob/master/segment_example.png" width="400">
-</p1>
+</h3>
 
 
 From this point forward, segment_number-beta value combinations are held apart: the steps below are repeated seperately for each of the 36 possible n-beta pairs.
